@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+public class PlayerShoot : SerializedMonoBehaviour
 {
     [SerializeField] private float shootSpeed;
-
+    [Required]
+   [SerializeField] private ParticleSystem muzzleflash;
     [SerializeField] private GameObject bulletObj;
     [SerializeField] private Transform gunPos;
 
@@ -43,6 +45,9 @@ public class PlayerShoot : MonoBehaviour
         {
             FireBullet();
            gun.transform.DOPunchPosition(Vector3.down, 0.25f,5);
+          muzzleflash.Stop();
+          muzzleflash.Play();
+           
         }
     }
 

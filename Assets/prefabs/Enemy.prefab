@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 671611442760081286}
   - component: {fileID: -4398687981402426952}
   - component: {fileID: 4367440125088809645}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 1585859225693730271}
   - component: {fileID: 4628099226221064210}
   - component: {fileID: 749142978082310274}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: alienparts (23)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 7929486959514081326}
   - component: {fileID: 123825003000506179}
   - component: {fileID: 9220939123348281314}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: alienparts (57)
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -379,7 +379,7 @@ GameObject:
   - component: {fileID: 8026709286174313108}
   - component: {fileID: 580387358533391029}
   - component: {fileID: 1882098764448965863}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: alienparts (13)
   m_TagString: enemy
   m_Icon: {fileID: 0}

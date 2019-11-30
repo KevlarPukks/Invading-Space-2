@@ -17,17 +17,17 @@ MonoBehaviour:
     overrideState: 1
     value: 1
   filtering:
-    overrideState: 1
-    value: {x: 54, y: 99}
+    overrideState: 0
+    value: {x: 54.000023, y: 99}
   minLuminance:
     overrideState: 1
-    value: -2.83
+    value: -2.06
   maxLuminance:
-    overrideState: 1
-    value: 0.22
+    overrideState: 0
+    value: -0.33
   keyValue:
-    overrideState: 1
-    value: 1
+    overrideState: 0
+    value: 2.99
   eyeAdaptation:
     overrideState: 0
     value: 0
@@ -70,10 +70,10 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.5
+    value: 11.23
   threshold:
     overrideState: 1
-    value: 0.03
+    value: 0
   softKnee:
     overrideState: 0
     value: 0.5
@@ -81,14 +81,14 @@ MonoBehaviour:
     overrideState: 0
     value: 65472
   diffusion:
-    overrideState: 0
-    value: 7
+    overrideState: 1
+    value: 5.6
   anamorphicRatio:
     overrideState: 0
-    value: 0
+    value: 1
   color:
-    overrideState: 0
-    value: {r: 1, g: 1, b: 1, a: 1}
+    overrideState: 1
+    value: {r: 0.4329288, g: 0.0990566, b: 1, a: 1}
   fastMode:
     overrideState: 0
     value: 0

@@ -158,5 +158,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 1
-  collisionParticle: {fileID: 790032751148420507, guid: acbee29e4db04c343ad4f2bb04dbc752,
+  collisionParticle: {fileID: 2893661811467644414, guid: 0730b7d131d67d9429f3b58d63dcc2cc,
     type: 3}
