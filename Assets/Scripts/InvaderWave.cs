@@ -1,10 +1,13 @@
 
     using System.Collections.Generic;
+    using Sirenix.OdinInspector;
     using UnityEngine;
+
     using static UnityEngine.Camera;
 [CreateAssetMenu(fileName = "InvaderWave")]
     public class InvaderWave:Wave
     {
+        [AssetList]
         [SerializeField] private GameObject enemyObj;
         [SerializeField]   private int amountX = 15;
         [ SerializeField]  private int amountY =10;
@@ -12,27 +15,26 @@
         [SerializeField] private float startPosX = 1;
         [SerializeField] private float startPosY = 6;
         [SerializeField] public float area=0.5f;
-        [SerializeField] float moveSpeed =0.5f;
+        [SerializeField] float startSpeed =0.5f;
+        
+        [SerializeField,Range(0.1f,100)] private float speedIncreasePercentPerSec;
         [SerializeField] private float moveDownTime;
         private float moveDownTimer =0.5f;
         private  bool moveDown;
         private  bool moveLeft=true;
-        List<GameObject> enemies = new List<GameObject>();
+     // public  List<GameObject> enemies = new List<GameObject>();
         [SerializeField] private float offScreenOffSet;
-        
+       [ShowInInspector] private float moveSpeed;
         public override void Start()
         {
           
             
         }
 
-        public override void makeup()
-        {
-            throw new System.NotImplementedException();
-        }
-
+     
         public override void Init(GameObject enemyHolder)
         {
+            moveSpeed = startSpeed;
           enemies.Clear(); 
           enemyholder = enemyHolder;
                     DrawGrid();
@@ -78,75 +80,91 @@
                 }
             }
         public override void Update()
-         {
+        {
+          var  speedIncrease = startSpeed * (speedIncreasePercentPerSec / 100);
+            moveSpeed += speedIncrease * Time.deltaTime;
              if (moveDown)
              {
-                 foreach (var enemy in enemies)
-                 {
-                     if (enemy.gameObject.activeInHierarchy)
-                     {
-                         enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.down);
-                     }
-                 }
-
-                 moveDownTimer += Time.deltaTime * 1;
-             
-                 if (moveDownTimer >= moveDownTime)
-                 {     
-                     moveDownTimer = 0;
-                     moveDown = false;
-         
-                 }
+                 MoveDown();
                  return;
              }
              if (moveLeft)
              {
-                 moveDownTimer = 0;
-                 foreach (var enemy in enemies)
-                 {
-                     if (enemy.gameObject.activeInHierarchy)
-                     {
-                         if (enemy.transform.position.x <
-                             Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + offScreenOffSet)
-                         {
-                             moveLeft = false;
-                             moveDown = true;
-                             break;
-                         }
-                     }
-                 }
-
-                 foreach (var enemy in enemies)
-                 {
-                     if (enemy.gameObject.activeInHierarchy)
-                     {
-                         enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.left);
-                     }
-                 }
+                 MoveLeft();
              }
              else
              {
-                 foreach (var enemy in enemies)
-                 {
-                     if (enemy.gameObject.activeInHierarchy)
-                     {
-                         if (enemy.transform.position.x >
-                             Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - offScreenOffSet)
-                         {
-                             moveLeft = true;
-                             moveDown = true;
-                             break;
-                         }
-                     }
-                 }
-
-                 foreach (var enemy in enemies)
-                 {
-                     if (enemy.gameObject.activeInHierarchy)
-                     {
-                         enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.right);
-                     }
-                 }
+                 MoveRight();
              }
          }
+
+        private void MoveRight()
+        {
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    if (enemy.transform.position.x >
+                        Camera.main.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - offScreenOffSet)
+                    {
+                        moveLeft = true;
+                        moveDown = true;
+                        break;
+                    }
+                }
+            }
+
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.right);
+                }
+            }
+        }
+
+        private void MoveLeft()
+        {
+            moveDownTimer = 0;
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    if (enemy.transform.position.x <
+                        Camera.main.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + offScreenOffSet)
+                    {
+                        moveLeft = false;
+                        moveDown = true;
+                        break;
+                    }
+                }
+            }
+
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.left);
+                }
+            }
+        }
+
+        private void MoveDown()
+        {
+            foreach (var enemy in enemies)
+            {
+                if (enemy.gameObject.activeInHierarchy)
+                {
+                    enemy.transform.Translate(moveSpeed * Time.deltaTime * Vector3.down);
+                }
+            }
+
+            moveDownTimer += Time.deltaTime * 1;
+
+            if (moveDownTimer >= moveDownTime)
+            {
+                moveDownTimer = 0;
+                moveDown = false;
+            }
+        }
     }

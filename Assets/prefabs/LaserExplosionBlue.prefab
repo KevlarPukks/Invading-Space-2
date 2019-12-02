@@ -14220,6 +14220,7 @@ GameObject:
   - component: {fileID: 2893661811482743052}
   - component: {fileID: 2893661811482693226}
   - component: {fileID: 2893661811471261344}
+  - component: {fileID: 8849818695255297210}
   m_Layer: 0
   m_Name: LaserExplosionBlue
   m_TagString: Untagged
@@ -19084,6 +19085,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &8849818695255297210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2893661811467644414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a992d9716322b0c4da48c1ff061127ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2893661811467644642
 GameObject:
   m_ObjectHideFlags: 0

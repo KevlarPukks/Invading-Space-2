@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class PlayerShoot : SerializedMonoBehaviour
+public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private float shootSpeed;
     [Required]
@@ -18,6 +19,7 @@ public class PlayerShoot : SerializedMonoBehaviour
     private Transform poolTransform;
     private float shootTimer;
     private List<GameObject> bulletList = new List<GameObject>();
+    
     // Start is called before the first frame update
     void Start()
     {
