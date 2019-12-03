@@ -19,7 +19,7 @@ TagManager:
   - 
   - brighten
   - playershipbrighten
-  - 
+  - enemy
   - 
   - 
   - 
@@ -45,6 +45,27 @@ TagManager:
   - name: Background
     uniqueID: 3600934081
     locked: 0
+  - name: background
+    uniqueID: 3436315043
+    locked: 0
+  - name: underlight
+    uniqueID: 3257073897
+    locked: 0
+  - name: planet
+    uniqueID: 1836367825
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Player
+    uniqueID: 3123157129
+    locked: 0
+  - name: enemy
+    uniqueID: 4174225073
+    locked: 0
+  - name: brighten
+    uniqueID: 2876210251
+    locked: 0
+  - name: fog
+    uniqueID: 519828725
     locked: 0

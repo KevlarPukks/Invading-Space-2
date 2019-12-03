@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef2f8650314e3dac861ee135658de5, type: 3}
+  m_Name: InvaderWave3rows
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  enemyholder: {fileID: 0}
+  enemyObj: {fileID: 80780318043156160, guid: d87c55f129a497b4eaea483016e7a67a, type: 3}
+  amountX: 15
+  amountY: 10
+  startPosX: 1
+  startPosY: 8.5
+  area: 0.5
+  startSpeed: 0.2
+  speedIncreasePercentPerSec: 2
+  moveDownTime: 0.3
+  offScreenOffSet: 0.1

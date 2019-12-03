@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8d118823c255a40b5ec29b9640d5be, type: 3}
+  m_Name: invader wave list
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  invaderWaves:
+  - {fileID: 11400000, guid: 640f6b893e5ac89468b3c917ab247b82, type: 2}
+  - {fileID: 11400000, guid: c06cb4855d4f6ce4796dc4003166157d, type: 2}
+  - {fileID: 11400000, guid: 83e848460b5b4834b923a34693dc4166, type: 2}
+  - {fileID: 11400000, guid: b3904fb8a8b91054d84025e1a32d8197, type: 2}
+  - {fileID: 11400000, guid: e43ce2d342937194f906f7adb56968e7, type: 2}
+  - {fileID: 11400000, guid: d02670ba811f6f142ade9afffbd797d1, type: 2}
+  - {fileID: 11400000, guid: bcafa1585e2d5084da85c951aa0dfa57, type: 2}
+  - {fileID: 11400000, guid: e80ddaba3e9e53e43b453b156b6dde55, type: 2}
+  - {fileID: 11400000, guid: f3d97e370afa3c54882a704393c8b4f6, type: 2}
+  - {fileID: 11400000, guid: ff6d697bd9ddf134894b640f09e85aa6, type: 2}
