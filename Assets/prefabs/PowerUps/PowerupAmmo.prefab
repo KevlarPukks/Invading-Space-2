@@ -4766,6 +4766,7 @@ GameObject:
   - component: {fileID: 8284399435432255137}
   - component: {fileID: 2783042245341768212}
   - component: {fileID: 6614829955290197199}
+  - component: {fileID: 6394242459524718706}
   m_Layer: 0
   m_Name: PowerupAmmo
   m_TagString: powerup
@@ -9539,6 +9540,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -6
+--- !u!114 &6394242459524718706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284399435447797791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23d369a11e50c246a1836b731437cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8284399435448033673
 GameObject:
   m_ObjectHideFlags: 0

@@ -9456,6 +9456,7 @@ GameObject:
   - component: {fileID: 5947522726357941479}
   - component: {fileID: 2422494281331616132}
   - component: {fileID: 520968325302031720}
+  - component: {fileID: 1141416858870954116}
   m_Layer: 0
   m_Name: PowerupShield
   m_TagString: powerup
@@ -14229,3 +14230,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -6
+--- !u!114 &1141416858870954116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947522726373880437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddbf0c832344744b71262a40a8e2e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

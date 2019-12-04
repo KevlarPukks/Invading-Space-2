@@ -16,6 +16,7 @@ public class Flicker : SerializedMonoBehaviour {
     private float flickOffTime;
 
 
+
     void Start() {
          
           
@@ -25,7 +26,7 @@ public class Flicker : SerializedMonoBehaviour {
     }
 
     void Update() {
-       
+        if (Player.instance.Health != 2) return;
         timer += Time.deltaTime * 1;
         
         if (shieldList[0].activeInHierarchy)

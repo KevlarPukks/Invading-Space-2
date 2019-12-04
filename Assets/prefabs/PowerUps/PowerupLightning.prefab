@@ -4766,6 +4766,7 @@ GameObject:
   - component: {fileID: 6394729992145536404}
   - component: {fileID: 7266133244473524659}
   - component: {fileID: 3619837445474645084}
+  - component: {fileID: 7908069469567190513}
   m_Layer: 0
   m_Name: PowerupLightning
   m_TagString: powerup
@@ -9539,6 +9540,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -6
+--- !u!114 &7908069469567190513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6394729992163250524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a08571397414294bad13bef8d38067f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  percentageIncrease: 30
 --- !u!1 &6394729992163335720
 GameObject:
   m_ObjectHideFlags: 0

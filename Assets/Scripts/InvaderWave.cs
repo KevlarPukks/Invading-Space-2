@@ -15,7 +15,7 @@
         [SerializeField] private float startPosX = 1;
         [SerializeField] private float startPosY = 6;
         [SerializeField] public float area=0.5f;
-        [SerializeField] float startSpeed =0.5f;
+        [SerializeField]public float startSpeed =0.5f;
         
         [SerializeField,Range(0.1f,100)] private float speedIncreasePercentPerSec;
         [SerializeField] private float moveDownTime;
@@ -25,7 +25,11 @@
      // public  List<GameObject> enemies = new List<GameObject>();
         [SerializeField] private float offScreenOffSet;
        [ShowInInspector] private float moveSpeed;
-        public override void Start()
+
+    public  override float MoveSpeed { get { return moveSpeed; } set { moveSpeed = value; } }
+    public override float StartSpeed { get; set; }
+
+    public override void Start()
         {
           
             
@@ -34,6 +38,7 @@
      
         public override void Init(GameObject enemyHolder)
         {
+        StartSpeed = startSpeed;
             moveSpeed = startSpeed;
           enemies.Clear(); 
           enemyholder = enemyHolder;

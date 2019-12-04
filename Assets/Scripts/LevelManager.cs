@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
 {
   
     [SerializeField] private InvaderWaveList waveList;
-    private Wave wave;
+    public static Wave wave;
     [SerializeField] private GameObject enemyHolder;
     public static UnityEvent enemyDead = new UnityEvent();
     private int level;
