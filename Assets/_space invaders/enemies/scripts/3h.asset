@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93f4eeeef0ee4e07991aaff1f16363a3, type: 3}
+  m_Name: 3h
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  health: 3
+  enemyDeadEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  deadParticle: {fileID: 888052107982311554, guid: 916a7cf0e8d79db4d8254f600f610587,
+    type: 3}
+  canShoot: 0
+  bullet: {fileID: 6688329140780858462, guid: cd3721762c862af43828b0f6c3d27cf5, type: 3}
+  shootTimeMin: 4
+  shootTimeMax: 8
+  shakeStrength: 0.2
+  shakeDuration: 0.2
+  deathShakeStrength: 50
+  deathShakeDuration: 1
+  canDropBonus: 0
+  bonusObjList: []
+  bonusDropChance: 10

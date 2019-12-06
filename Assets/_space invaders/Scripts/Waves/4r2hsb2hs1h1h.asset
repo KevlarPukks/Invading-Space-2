@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3ef2f8650314e3dac861ee135658de5, type: 3}
+  m_Name: 4r2hsb2hs1h1h
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  enemyholder: {fileID: 0}
+  enemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  enemyObjOnEachRow:
+  - {fileID: 1955249579536896991, guid: 7b8ec8368eb02994eafa3ad02ceff5c9, type: 3}
+  - {fileID: 55316610618543185, guid: 4fdc41e9638e0ac43a8c831a96310034, type: 3}
+  - {fileID: 6729553631839868237, guid: ec31a6b4c12813b43b434258b8999033, type: 3}
+  - {fileID: 6729553631839868237, guid: ec31a6b4c12813b43b434258b8999033, type: 3}
+  startPosX: 1
+  area: 0.5
+  startSpeed: 0.5
+  speedIncreasePercentPerSec: 2
+  moveDownTime: 0.3
+  offScreenOffSet: 0.15
