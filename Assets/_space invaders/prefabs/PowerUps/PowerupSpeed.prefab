@@ -4802,6 +4802,8 @@ MonoBehaviour:
   pickUpSound: {fileID: 8300000, guid: fae982edd3825a649b45d90c522c0f7e, type: 3}
   pickUpParticle: {fileID: 5865362907052606036, guid: fdde2c4d95224b444b761279573677d8,
     type: 3}
+  pickUpParticleSpawner: {fileID: 11400000, guid: dd9204e456cda164cb12927f3e1255a0,
+    type: 2}
   moveSpeedDecreasePercentage: 20
 --- !u!1 &3059692634038425773
 GameObject:

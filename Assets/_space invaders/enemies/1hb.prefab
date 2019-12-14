@@ -79,12 +79,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 793b8c2f32f09774586d3b1604db5e33, type: 2}
+  bulletSpawner: {fileID: 11400000, guid: 811d4372738029f419d8266959cfd9c3, type: 2}
+  deadParticleSpawner: {fileID: 11400000, guid: c379e585420331e4792b339588a93644,
+    type: 2}
   gunPosition: {fileID: 4063088033736340557}
   enemyDeadEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  spriteRenderer: {fileID: 0}
+  nearlyDeadColor: {r: 1, g: 0, b: 0, a: 1}
+  CapCollider: {fileID: 0}
+  startPos: {x: 0, y: 0}
 --- !u!212 &1856980401819107209
 SpriteRenderer:
   m_ObjectHideFlags: 0

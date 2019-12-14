@@ -128,6 +128,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: 7e9e60bd261e1be458adf599102ed948, type: 2}
+  bulletSpawner: {fileID: 11400000, guid: 811d4372738029f419d8266959cfd9c3, type: 2}
+  deadParticleSpawner: {fileID: 11400000, guid: c379e585420331e4792b339588a93644,
+    type: 2}
   gunPosition: {fileID: 6730205024195748141}
   enemyDeadEvent:
     m_PersistentCalls:
@@ -136,6 +139,8 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   spriteRenderer: {fileID: 0}
   nearlyDeadColor: {r: 1, g: 0, b: 0, a: 1}
+  CapCollider: {fileID: 0}
+  startPos: {x: 0, y: 0}
 --- !u!70 &245784920193617742
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

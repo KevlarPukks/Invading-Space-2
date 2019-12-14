@@ -21,6 +21,11 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
+  bonusSpawnList:
+  - {fileID: 11400000, guid: af002ffee75a1e348a7b7dfa0191bac9, type: 2}
+  - {fileID: 11400000, guid: c0edd1d89820ad64dbf025dfd00e29bd, type: 2}
+  - {fileID: 11400000, guid: b9f6a80f26511d74f88143a1ad2a1b87, type: 2}
+  - {fileID: 11400000, guid: 6fbbdacf9dc50794c9c923000f87cb15, type: 2}
   health: 1
   enemyDeadEvent:
     m_PersistentCalls:
@@ -36,6 +41,7 @@ MonoBehaviour:
   shakeStrength: 0.2
   shakeDuration: 0.2
   deathShakeStrength: 50
+  startPos: {x: 0, y: 0}
   deathShakeDuration: 1
   canDropBonus: 1
   bonusObjList:
@@ -43,4 +49,4 @@ MonoBehaviour:
   - {fileID: 6394729992163250524, guid: b90b7edecd7b19b40a4595de83b3c4a9, type: 3}
   - {fileID: 5947522726373880437, guid: 62ac172f6c775ce4fae6681cc2d9a961, type: 3}
   - {fileID: 3059692634038418169, guid: 92daa89da0d854746998f27ea35e768e, type: 3}
-  bonusDropChance: 12.5
+  bonusDropChance: 100

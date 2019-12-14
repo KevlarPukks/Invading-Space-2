@@ -14,6 +14,8 @@ public class InvaderEnemy : MonoBehaviour
 
     [SerializeField]private float deathShakeDuration = 0.5f;
     [SerializeField] private GameObject deadParticle;
+    [SerializeField] ObjectSpawner deadPartcileSpawner;
+
     public TakeDamageEvent TakeDamage;
 
     private CapsuleCollider2D collider;
@@ -48,8 +50,8 @@ public class InvaderEnemy : MonoBehaviour
      transform.DOShakeRotation(deathShakeDuration, Vector3.forward * deathShakeStrength,20);
      collider.enabled = false;
      yield return new WaitForSeconds(deathShakeDuration);
-     Instantiate(deadParticle, transform.position, Quaternion.identity);
-
+  //   Instantiate(deadParticle, transform.position, Quaternion.identity);
+        deadPartcileSpawner.Spawn(transform.position);
      gameObject.SetActive(false);
      LevelManager.enemyDead.Invoke();
  }

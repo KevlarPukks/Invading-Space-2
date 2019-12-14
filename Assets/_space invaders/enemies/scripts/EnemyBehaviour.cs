@@ -11,7 +11,8 @@ public class EnemyBehaviour : MonoBehaviour
 {
     [Required]
     public Enemy enemy;
-
+    [SerializeField] ObjectSpawner bulletSpawner;
+    [SerializeField] ObjectSpawner deadParticleSpawner;
     [SerializeField] private Transform gunPosition;
     private int health = 3;
     [HideInInspector]
@@ -28,15 +29,18 @@ public class EnemyBehaviour : MonoBehaviour
     private bool canDropBonus = false;
     private GameObject[] bonusObjList;
     [SerializeField] private SpriteRenderer spriteRenderer;
-    [SerializeField] private Color nearlyDeadColor= Color.red;
-
+    [SerializeField] private Color nearlyDeadColor = Color.red;
+    private List<ObjectSpawner> bonusSpawnList = new List<ObjectSpawner>();
     private float bonusDropChance = 10;
     private float deathShakeDuration = 1f;
-  private Collider2D CapCollider;
-    [HideInInspector]public TakeDamageEvent takeDamage = new TakeDamageEvent();
+    public Collider2D CapCollider;
+    public Vector2 startPos;
+    [HideInInspector] public TakeDamageEvent takeDamage = new TakeDamageEvent();
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
     private void Start()
     {
@@ -56,20 +60,24 @@ public class EnemyBehaviour : MonoBehaviour
         shootTimer = 0;
         shootTime = ShootTime();
         CapCollider = GetComponent<Collider2D>();
+        bonusSpawnList = enemy.bonusSpawnList; 
         enemyDeadEvent.AddListener(EnemyDead);
         takeDamage.AddListener(TakeDamage);
-          
-    //   enemy.Init(this);
-}
-   
 
+        //   enemy.Init(this);
+    }
+
+    private void OnEnable()
+    {
+
+    }
     private void Update()
     {
         //   enemy.Update();
         Shoot();
     }
 
- private void Shoot()
+    private void Shoot()
     {
         if (!canShoot) return;
         shootTimer += Time.deltaTime * 1;
@@ -77,13 +85,15 @@ public class EnemyBehaviour : MonoBehaviour
         {
             shootTimer = 0;
             shootTime = ShootTime();
-            Instantiate(bullet, gunPosition.position, Quaternion.identity);
+            bulletSpawner.Spawn(gunPosition.position);
+          //  Instantiate(bullet, gunPosition.position, Quaternion.identity);
         }
     }
     private float ShootTime()
     {
 
         var i = Random.Range(shootTimeMin, shootTimeMax);
+
 
         return i;
     }
@@ -96,8 +106,9 @@ public class EnemyBehaviour : MonoBehaviour
         {
             Debug.Log(Random.value + "and" + bonusDropChance / 100);
 
-            Instantiate(bonusObjList[Random.Range(0, bonusObjList.Length)],transform.position,
-                Quaternion.identity);
+            //Instantiate(bonusObjList[Random.Range(0, bonusObjList.Length)], transform.position,
+            //    Quaternion.identity);
+            bonusSpawnList[Random.Range(0, bonusSpawnList.Count)].Spawn(transform.position);
         }
     }
     public virtual void TakeDamage(int amount)
@@ -109,7 +120,7 @@ public class EnemyBehaviour : MonoBehaviour
 
             if (enemy.health > 1)
             {
-  spriteRenderer.color = nearlyDeadColor;
+                spriteRenderer.color = nearlyDeadColor;
             }
         }
         else if (health < 1)
@@ -117,10 +128,10 @@ public class EnemyBehaviour : MonoBehaviour
             EnemyDead();
 
         }
-        if (health>0)
+        if (health > 0)
 
         {
-                      transform.DOPunchRotation(Vector3.left * shakeStrength, shakeDuration);
+            transform.DOPunchRotation(Vector3.left * shakeStrength, shakeDuration);
         }
     }
     void EnemyDead()
@@ -133,11 +144,13 @@ public class EnemyBehaviour : MonoBehaviour
         CapCollider.enabled = false;
 
         yield return new WaitForSeconds(deathShakeDuration);
-        Instantiate(deadParticle, transform.position, Quaternion.identity);
+     //   Instantiate(deadParticle, transform.position, Quaternion.identity);
+        deadParticleSpawner.Spawn(transform.position);
         //enemy.EnemyDead();
         BonusDrop();
 
         gameObject.SetActive(false);
+        CapCollider.enabled = true;
         LevelManager.enemyDead.Invoke();
 
 

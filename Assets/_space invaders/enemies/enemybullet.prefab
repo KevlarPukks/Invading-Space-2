@@ -14157,6 +14157,7 @@ GameObject:
   - component: {fileID: 7227850397103314978}
   - component: {fileID: 5744058558898485674}
   - component: {fileID: 8442160928321676893}
+  - component: {fileID: -2846662601201235468}
   m_Layer: 0
   m_Name: enemybullet
   m_TagString: enemybullet
@@ -19010,3 +19011,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collisionParticle: {fileID: 2516532581646233398, guid: 248cb9b68fdde8843833b39d398b8d5b,
     type: 3}
+  collisionSpawner: {fileID: 11400000, guid: 98be52a9beda93740b891554c785a2f9, type: 2}
+--- !u!114 &-2846662601201235468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6688329140780858462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e4ccde70111a514eb1575d4d20c23b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -16,7 +16,7 @@ public class ParticleObjectDestroyer : MonoBehaviour
     {
         if (_particleSystem.isStopped)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

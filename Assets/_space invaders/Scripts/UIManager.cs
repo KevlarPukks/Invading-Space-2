@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 public class UIManager:MonoBehaviour
 {
-    [SerializeField]private Slider shield;
+    public static UIManager instance;
+    public Slider shield;
 
-    [SerializeField] private Text Score;
+   public Text Score;
 
-    [SerializeField] private Text wave;
+    public Text wave;
 
-    
-    
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
 }

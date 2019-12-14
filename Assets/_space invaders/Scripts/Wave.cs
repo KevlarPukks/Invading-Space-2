@@ -18,5 +18,6 @@ public abstract class Wave : SerializedScriptableObject
     }
     public abstract void Update();
     public virtual float StartSpeed { get => throw new NotImplementedException(); set => throw new NotImplementedException();  }
-    public abstract void Init(GameObject g);
+    public abstract void SpawnInvaders(GameObject g);
+    public virtual IEnumerator _Init() { yield return new NotImplementedException(); }
 }

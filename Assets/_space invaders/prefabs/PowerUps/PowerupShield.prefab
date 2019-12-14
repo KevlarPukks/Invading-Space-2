@@ -14245,3 +14245,5 @@ MonoBehaviour:
   pickUpSound: {fileID: 8300000, guid: 9061011a8d4ffe946bae14c5bc812fec, type: 3}
   pickUpParticle: {fileID: 5865362907052606036, guid: fdde2c4d95224b444b761279573677d8,
     type: 3}
+  pickUpParticleSpawner: {fileID: 11400000, guid: dd9204e456cda164cb12927f3e1255a0,
+    type: 2}

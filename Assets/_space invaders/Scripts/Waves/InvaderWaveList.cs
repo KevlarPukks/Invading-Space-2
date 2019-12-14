@@ -7,9 +7,14 @@ using UnityEngine;
 public class InvaderWaveList : SerializedScriptableObject
 {
     public List<InvaderWave> invaderWaves;
-
-    public InvaderWave GetInvaderWave(int rows =4)
+    
+    public InvaderWave GetInvaderWave(int level =4)
     {
-        return invaderWaves[rows - 1];
+        return invaderWaves[level - 1];
+    }
+
+    public void SpawnPool()
+    {
+     
     }
 }

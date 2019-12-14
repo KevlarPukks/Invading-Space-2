@@ -30,19 +30,32 @@ public class InvaderWave : Wave
 
 
     }
+    public override IEnumerator _Init()
+    {
+        moveSpeed = startSpeed;
+        foreach (var enemy in enemies)
+        {
 
+            EnemyBehaviour enemyBehaviour = enemy.GetComponent<EnemyBehaviour>();
+            enemy.transform.position = enemyBehaviour.startPos;
+            enemyBehaviour.CapCollider.enabled = true;
 
-    public override void Init(GameObject enemyHolder)
+            enemy.gameObject.SetActive(false);
+        }
+        yield return null;
+    }
+
+    public override void SpawnInvaders(GameObject enemyHolder)
     {
         StartSpeed = startSpeed;
         moveSpeed = startSpeed;
         enemies.Clear();
         enemyholder = enemyHolder;
-        LevelManager.instance.StartCoroutine(DrawGrid());
+       DrawGrid2();
 
     }
-
-    public override IEnumerator DrawGrid()
+    
+    public override IEnumerator  DrawGrid()
     {
         if (main == null) yield return null;
         spawning = true;
@@ -57,10 +70,42 @@ public class InvaderWave : Wave
                 xObject.transform.position = new Vector2(x, y);
 
                 enemies.Add(xObject);
-                yield return new WaitForSeconds(0.1f);
+                xObject.GetComponent<EnemyBehaviour>().startPos = new Vector2(x, y);
+                Debug.Log(x + "  " + y);
+                yield return new WaitForSeconds(0.01f);
                 x += area;
                 if (x > main.ViewportToWorldPoint(new Vector3(1, 0, 10f)).x)
                 {
+                    yield return new WaitForSeconds(0.25f);
+                    break;
+                }
+            }
+            y -= area;
+            x = b.x + startPosX;
+        }
+        spawning = false;
+    }
+    public   void DrawGrid2()
+    {
+        if (main == null) return;
+        spawning = true;
+        var b = main.ViewportToWorldPoint(new Vector3(0, 1, 10f));
+        var x = b.x + startPosX; // Define x.
+        var y = b.y - area;
+        for (int row = 0; row < enemyObjOnEachRow.Length; row++)
+        {
+            for (int col = 0; col < 15; col++)
+            {
+                var xObject = Instantiate(enemyObjOnEachRow[row], enemyholder.transform, true);
+                xObject.transform.position = new Vector2(x, y);
+                xObject.GetComponent<EnemyBehaviour>().startPos = new Vector2(x, y);
+                xObject.SetActive(false);
+                enemies.Add(xObject);
+               
+                x += area;
+                if (x > main.ViewportToWorldPoint(new Vector3(1, 0, 10f)).x)
+                {
+                   
                     break;
                 }
             }

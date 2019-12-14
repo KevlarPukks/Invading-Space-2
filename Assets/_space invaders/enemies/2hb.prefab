@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4096361908265737635}
   - component: {fileID: 1893772993526155441}
   m_Layer: 0
-  m_Name: enemybug4
+  m_Name: 2hb
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,12 +49,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 11400000, guid: f20627ec2e29ddf4b893fc8117327569, type: 2}
+  bulletSpawner: {fileID: 11400000, guid: 811d4372738029f419d8266959cfd9c3, type: 2}
+  deadParticleSpawner: {fileID: 11400000, guid: c379e585420331e4792b339588a93644,
+    type: 2}
   gunPosition: {fileID: 7207890681300959507}
   enemyDeadEvent:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  spriteRenderer: {fileID: 0}
+  nearlyDeadColor: {r: 1, g: 0, b: 0, a: 1}
+  CapCollider: {fileID: 0}
+  startPos: {x: 0, y: 0}
 --- !u!212 &5754574620302326640
 SpriteRenderer:
   m_ObjectHideFlags: 0
